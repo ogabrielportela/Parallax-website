@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">logo</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>    
+            <li><a href="#">About</a></li>    
+            <li><a href="#">Work</a></li>    
+            <li><a href="#">Contact</a></li>    
+        </ul>
+    </header>
+    <section>
+        <img src="stars.png" id="stars">
+        <img src="moon.png" id="moon">
+        <img src="mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Moon Light</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Parallax Scrolling Effects</h2> 
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur cumque aperiam quasi, laboriosam eius porro, ea, saepe harum quisquam excepturi cum ex minima deleniti earum corrupti amet minus facilis distinctio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum animi dicta ipsa rem atque vitae temporibus velit hic, non, voluptatum officia aliquam exercitationem sit odio impedit laborum itaque expedita reiciendis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint perspiciatis reprehenderit quis voluptatum deserunt, eveniet numquam quibusdam nulla impedit esse, ratione id culpa repudiandae ut nihil. Sunt autem accusantium possimus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus corrupti voluptatem neque voluptas esse explicabo ab, laborum animi omnis dicta minima ut at rem nobis totam unde, tempora ea corporis! <br> <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis soluta molestiae, odio nostrum distinctio itaque? Perspiciatis nemo mollitia perferendis, repellendus laboriosam sint dolorem at adipisci cupiditate qui odio voluptates id. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam nisi quia voluptate vitae. Vitae eveniet veritatis dolor maiores saepe rem amet, veniam ex soluta ipsam voluptatum cupiditate. Sequi, odio minus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam mollitia provident blanditiis ratione quisquam aliquam rerum beatae et tempore doloribus id distinctio consequuntur, ex aut. Reprehenderit mollitia reiciendis aliquid amet!<br> <br>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur cumque aperiam quasi, laboriosam eius porro, ea, saepe harum quisquam excepturi cum ex minima deleniti earum corrupti amet minus facilis distinctio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum animi dicta ipsa rem atque vitae temporibus velit hic, non, voluptatum officia aliquam exercitationem sit odio impedit laborum itaque expedita reiciendis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint perspiciatis reprehenderit quis voluptatum deserunt, eveniet numquam quibusdam nulla impedit esse, ratione id culpa repudiandae ut nihil. Sunt autem accusantium possimus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus corrupti voluptatem neque voluptas esse explicabo ab, laborum animi omnis dicta minima ut at rem nobis totam unde, tempora ea corporis!<br> <br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis soluta molestiae, odio nostrum distinctio itaque? Perspiciatis nemo mollitia perferendis, repellendus laboriosam sint dolorem at adipisci cupiditate qui odio voluptates id. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam nisi quia voluptate vitae. Vitae eveniet veritatis dolor maiores saepe rem amet, veniam ex soluta ipsam voluptatum cupiditate. Sequi, odio minus. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam mollitia provident blanditiis ratione quisquam aliquam rerum beatae et tempore doloribus id distinctio consequuntur, ex aut. Reprehenderit mollitia reiciendis aliquid amet!<br> <br>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur cumque aperiam quasi, laboriosam eius porro, ea, saepe harum quisquam excepturi cum ex minima deleniti earum corrupti amet minus facilis distinctio. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum animi dicta ipsa rem atque vitae temporibus velit hic, non, voluptatum officia aliquam exercitationem sit odio impedit laborum itaque expedita reiciendis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint perspiciatis reprehenderit quis voluptatum deserunt, eveniet numquam quibusdam nulla impedit esse, ratione id culpa repudiandae ut nihil. Sunt autem accusantium possimus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus corrupti voluptatem neque voluptas esse explicabo ab, laborum animi omnis dicta minima ut at rem nobis totam unde, tempora ea corporis!
+
+
+        </p>
+
+    </div>
+
+    <script>
+        let star = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('stars');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function(){
+        let value = window.scrollY;
+        stars.style.left = value * 0.25 + 'px';
+        moon.style.top = value * 1.05 + 'px';
+        mountains_behind.style.top = value * 0.05 + 'px';
+        mountains_front.style.top = value * 0 + 'px';
+        text.style.marginRight = value * 4 + 'px';
+        text.style.marginTop = value * 1.5 + 'px';
+        btn.style.marginTop = value * 1.5 + 'px';
+        header.style.top = value * 0.05  + 'px';
+        
+
+        })
+    </script>
+</body>
+</html>
